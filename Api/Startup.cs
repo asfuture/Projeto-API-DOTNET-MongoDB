@@ -27,27 +27,11 @@ namespace Api
         {
             services.AddSingleton<Data.MongoDB>();
             services.AddControllers();
-
-             /* Observação alex apagar
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Api", Version = "v1" });
-            });
-            */
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            /*
-                Observação alex para apaga.
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api v1"));
-            }
-            */
+         
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseEndpoints(endpoints =>

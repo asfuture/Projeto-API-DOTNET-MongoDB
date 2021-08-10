@@ -35,7 +35,7 @@ namespace Api
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseEndpoints(endpoints =>
-            //app.UseAuthorization(); Observação alex apagar
+           
             {
                 
                 endpoints.MapControllers();
